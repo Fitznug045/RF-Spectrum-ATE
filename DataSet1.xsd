@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="No" msprop:Generator_ColumnPropNameInTable="NoColumn" msprop:Generator_ColumnPropNameInRow="No" msprop:Generator_UserColumnName="No" msprop:Generator_ColumnVarNameInTable="columnNo" type="xs:int" minOccurs="0" />
+              <xs:element name="Freq_x0020__x0028_MHz_x0029_" msprop:Generator_ColumnPropNameInTable="_Freq__MHz_Column" msprop:Generator_ColumnPropNameInRow="_Freq__MHz_" msprop:Generator_UserColumnName="Freq (MHz)" msprop:Generator_ColumnVarNameInTable="_columnFreq__MHz_" type="xs:string" minOccurs="0" />
+              <xs:element name="Limit_x0020__x0028_dBm_x0029_" msprop:Generator_ColumnPropNameInTable="_Limit__dBm_Column" msprop:Generator_ColumnPropNameInRow="_Limit__dBm_" msprop:Generator_UserColumnName="Limit (dBm)" msprop:Generator_ColumnVarNameInTable="_columnLimit__dBm_" type="xs:string" minOccurs="0" />
+              <xs:element name="Power_x0020__x0028_dBm_x0029_" msprop:Generator_ColumnPropNameInTable="_Power__dBm_Column" msprop:Generator_ColumnPropNameInRow="_Power__dBm_" msprop:Generator_UserColumnName="Power (dBm)" msprop:Generator_ColumnVarNameInTable="_columnPower__dBm_" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="DeviceName" msprop:Generator_ColumnPropNameInRow="DeviceName" msprop:Generator_ColumnPropNameInTable="DeviceNameColumn" msprop:Generator_ColumnVarNameInTable="columnDeviceName" msprop:Generator_UserColumnName="DeviceName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
