@@ -78,7 +78,6 @@
             this.TxtResource.Name = "TxtResource";
             this.TxtResource.Size = new System.Drawing.Size(181, 20);
             this.TxtResource.TabIndex = 2;
-            this.TxtResource.Text = "192.168.1.100";
             // 
             // Label1
             // 
