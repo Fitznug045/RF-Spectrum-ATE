@@ -41,7 +41,8 @@ Build -> Build Solution
 - Open the application and turn on Spectrum Analyzer
 - Ensure it is connected to the same network as your PC
 - Get the analyzer’s IP address and type it into **Resource Address** field
-- Click **Connect**
+- Click **Connect**<br/>
+
 If the connection is successfull :
 - Device name will be shown
 - Notification will appear
