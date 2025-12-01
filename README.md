@@ -38,7 +38,7 @@ Build -> Build Solution
 
 # User Guide
 ### 1. Connecting to Spectrum Analyzer
-- Buka aplikasi and nyalakan Spectrum Analyzer
+- Buka aplikasi dan nyalakan Spectrum Analyzer
 - Pastikan instrumen terkoneksi ke jaringan yang sama dengan PC
 - Ambil alamat IP analyzer dan masukkan ke kolom **Resource Address**
 - Klik **Connect**<br/>
