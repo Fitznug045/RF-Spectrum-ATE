@@ -1,9 +1,9 @@
 # Description
-This project is an Automated Test Equipment (ATE) application designed to automate measurements, monitoring, and testing for Spectrum Analyzer devices, specifically for **Siglent SSA3021X Plus** & **Siglent SHA851A**.<br/> 
+Proyek ini adalah aplikasi Automated Test Equipment (ATE) yang dirancang untuk mengotomatisasi proses pengukuran, monitoring, dan pengujian pada perangkat Spectrum Analyzer, khusunya untuk **Siglent SSA3021X Plus** & **Siglent SHA851A**.<br/> 
 
-It is built using **C# Windows Forms** and includes custom UI components such as real-time graph visualization, custom notifications, Excel integration, and Crystal Reports for automated report generation.<br/>
+Aplikasi ini dibuat menggunakan **C# Windows Forms** dan mencakup komponen UI kustom seperti visualisasi grafik real-time, notifikasi khusus, integrasi Excel, serta Crystal Reports untuk pembuatan laporan otomatis.<br/>
 
-It uses **SCPI (Standard Commands for Programmable Instruments)** over TCP/IP to communicate with the analyzer, retrieve trace data, and perform automated frequency testing with PASS/FAIL evaluation.
+Aplikasi ini menggunakan **SCPI (Standard Commands for Programmable Instruments)** melalui TCP/IP untuk berkomunikasi dengan analyzer, mengambil data trace, dan melakukan pengujian frekuensi otomatis dengan evaluasi PASS/FAIL.
 # Installation
 ### Requirements
 - Windows 10/11
@@ -11,110 +11,108 @@ It uses **SCPI (Standard Commands for Programmable Instruments)** over TCP/IP to
 - Visual Studio 2022 (for option 2)
 
 ## Option 1 : Install prebuilt application
-- Download from [releases](https://github.com/Fitznug045/RF-Spectrum-ATE/releases/tag/v1.0.0) and unpack the zip file
-- Open Release folder and run SpectrumAnalyzerGUI.exe
+- Download dari halaman [releases](https://github.com/Fitznug045/RF-Spectrum-ATE/releases/tag/v1.0.0) and ekstrak file ZIP
+- Buka folder Release dan jalankan SpectrumAnalyzerGUI.exe
 
 ## Option 2 : Build from source code
-- Clone this repository
+- Clone repository
 ```
 git clone https://github.com/Fitznug045/RF-Spectrum-ATE.git
 cd RF-Spectrum-ATE
 ```
-- Open solution file in Visual Studio 2022
-- Install required NuGet packages:<br/>
+- Buka file solution (.sln) di Visual Studio 2022
+- Install NuGet packages:<br/>
   1. EPPlus (Excel reading)
   2. OpenTK
   3. System.Data.DataSetExtensions
-- Set configuration from **Debug** to **Release**
-- Ensure Crystal Reports Runtime is installed
-- Build the project :
+- Ubah konfigurasi dari **Debug** ke **Release**
+- Pastikan Crystal Reports Runtime terinstal
+- Build project :
 ```
 Build -> Build Solution
 ```
-- Executible will be located in :
+- Executible akan terletak di :
 ```
 /bin/Release/
 ```
 
 # User Guide
 ### 1. Connecting to Spectrum Analyzer
-- Open the application and turn on Spectrum Analyzer
-- Ensure it is connected to the same network as your PC
-- Get the analyzer’s IP address and type it into **Resource Address** field
-- Click **Connect**<br/>
+- Buka aplikasi and nyalakan Spectrum Analyzer
+- Pastikan instrumen terkoneksi ke jaringan yang sama dengan PC
+- Ambil alamat IP analyzer dan masukkan ke kolom **Resource Address**
+- Klik **Connect**<br/>
 
-If the connection is successfull :
-- Device name will be shown
-- Notification will appear
-- Measurement controls will be enabled
+Jika koneksi berhasil :
+- Nama perangkat akan tampil
+- Notifikasi akan muncul
+- Kontrol pengukuran akan aktif
 
 ### 2. Starting Measurement
-- After connecting, click **Start** to measure
-- The graph will begin updating in real time
-- The following values will update automatically :<br/>
+- Setelah terhubung, klik **Start** untuk melakukan pengukuran
+- Grafik akan diperbarui secara real-time
+- Nilai berikut akan terupdate otomatis :<br/>
   - Start Frequency
   - Stop Frequency
   - Peak Frequency
   - Peak Amplitude
-- To stop measurement, click **Stop**
+- Untuk menghentikan pengukuran, klik **Stop**
 
 ### 3. Adjusting Frequency Settings
-You can manually control the analyzer's center frequency and span.<br/>
-To apply, you must :
-1. Stop the measurement
-2. Enter values
-3. click **Apply**
+Anda dapat mengatur center frequency dan span secara manual dengan:<br/>
+1. klik **Stop**
+2. input nilai di center frequency dan span
+3. klik **Apply**
 
 ### 4. Importing Test List
-This allows automatic PASS/FAIL testing using a frequency list from Excel.<br/>
+Fitur ini memungkinkan pengujian otomatis PASS/FAIL menggunakan daftar frekuensi dari Excel.<br/>
 **Excel Format**<br/>
-Your Excel must have this format:
 | No | Freq (MHz) | Limit (dBm) |
 | -- | ---------- | ----------- |
 | 1  | 100        | -30         |
 | 2  | 150        | -28         |
 
-To import :
-1. Click **Import**
-2. Select .xlsx file
-3. The excel data will be inserted in the table
+Untuk melakukan import :
+1. Klik **Import**
+2. pilih file .xlsx
+3. Data excel data akan dimasukkan ke tabel
 
 ### 5. Running Automated Test (Batch Test)
-Once the Excel list is imported:<br/>
-1. Ensure the analyzer is connected
-2. Click **Run Test**
+Setelah melakukan import:<br/>
+1. Pastikan analyzer terhubung
+2. Klik **Run Test**
 
-For each frequency :<br/>
-- The analyzer is tuned
-- A trace is acquired
-- The nearest frequency sample is evaluated
-- PASS/FAIL is computed
-- Table row is colored :
-  - Green = PASS
-  - Red = FAIL
-You will receive notification when the test is completed.
+Untuk setiap frekuensi :<br/>
+- Analyzer akan dituning otomatis
+- Trace akan terambil
+- Sampel frekuensi dievaluasi
+- PASS/FAIL dihitung
+- Baris tabel diberi warna :
+  - Hijau = PASS
+  - Merah = FAIL
+Notifikasi akan muncul setelah tes selesai.
 
 ### 6. Saving Results & Creating Reports
-After test execution, click **Save**.
+Setelah melakukan pengujian, klik **Save**.
 
-A PDF-style report is generated through Crystal Reports, containing :<br/>
+Laporan berbentuk PDF akan dihasilkan menggunakan Crystal Reports, berisi :<br/>
 - Device Name
 - Test Date & Time
 - PASS/FAIL Summary
 - Pass Percentage
 - Full test table
 
-In the report viewer you can :
+Di report viewer anda bisa :
 - Export to PDF
 - Print
 - Save to file
 
 ### 7. Clearing the Table
-Click **Clear** to remove all rows from the test table.<br/>
-This does not affect graph or connection status.
+Klik **Clear** untuk menghapus semua baris dari tabel pengujian.<br/>
+Tindakan ini tidak akan mempengaruhi grafik atau status koneksi.
 
 ### 8. Disconnecting
-To safely disconnected:
-- Click **Disconnect**
-- Active measurement loops will stop
-- UI returns to idle state 
+Untuk memutuskan koneksi dengan aman:
+- Klik **Disconnect**
+- Loop pengukuran akan berhenti
+- UI akan kembali ke keadaan idle
