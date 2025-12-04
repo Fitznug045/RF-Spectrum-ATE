@@ -56,7 +56,7 @@ namespace SpectrumAnalyzerGUI
             {
                 string ip = TxtResource.Text;
                 if(!int.TryParse(TxtPort.Text, out int port))
-        {
+                {
                     await MessageBox.ShowAsync("Port harus berupa angka!", "Error",
                     MessageBox.ToastIcon.Error, 1500, this);
                     return;
