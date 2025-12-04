@@ -9,9 +9,10 @@ Aplikasi ini menggunakan **SCPI (Standard Commands for Programmable Instruments)
 - Windows 10/11
 - .NET Desktop Runtime 
 - Visual Studio 2022 (for option 2)
+- Crystal Report runtime (di releases v1.1.0 atau [releases](https://github.com/Fitznug045/RF-Spectrum-ATE/releases/tag/v.1.1.0))
 
 ## Option 1 : Install prebuilt application
-- Download dari halaman [releases](https://github.com/Fitznug045/RF-Spectrum-ATE/releases/tag/v1.0.0) and ekstrak file ZIP
+- Download dari halaman [releases](https://github.com/Fitznug045/RF-Spectrum-ATE/releases/tag/v.1.1.0) and ekstrak file ZIP
 - Buka folder Release dan jalankan SpectrumAnalyzerGUI.exe
 
 ## Option 2 : Build from source code
@@ -89,8 +90,8 @@ Untuk setiap frekuensi :<br/>
 - PASS/FAIL dihitung
 - Baris tabel diberi warna :
   - Hijau = PASS
-  - Merah = FAIL
-Notifikasi akan muncul setelah tes selesai.
+  - Merah = FAIL<br/>
+- Notifikasi akan muncul setelah tes selesai.
 
 ### 6. Saving Results & Creating Reports
 Setelah melakukan pengujian, klik **Save**.
