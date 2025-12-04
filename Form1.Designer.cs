@@ -47,6 +47,8 @@
             this.LblName = new System.Windows.Forms.Label();
             this.BtnDisconnect = new System.Windows.Forms.Button();
             this.BtnClear = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtPort = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -84,14 +86,14 @@
             this.Label1.AutoSize = true;
             this.Label1.Location = new System.Drawing.Point(17, 37);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(61, 13);
+            this.Label1.Size = new System.Drawing.Size(64, 13);
             this.Label1.TabIndex = 3;
-            this.Label1.Text = "IP Address:";
+            this.Label1.Text = "IP Address :";
             // 
             // LblStart
             // 
             this.LblStart.AutoSize = true;
-            this.LblStart.Location = new System.Drawing.Point(17, 64);
+            this.LblStart.Location = new System.Drawing.Point(17, 82);
             this.LblStart.Name = "LblStart";
             this.LblStart.Size = new System.Drawing.Size(87, 13);
             this.LblStart.TabIndex = 6;
@@ -100,7 +102,7 @@
             // LblStop
             // 
             this.LblStop.AutoSize = true;
-            this.LblStop.Location = new System.Drawing.Point(17, 80);
+            this.LblStop.Location = new System.Drawing.Point(17, 98);
             this.LblStop.Name = "LblStop";
             this.LblStop.Size = new System.Drawing.Size(87, 13);
             this.LblStop.TabIndex = 8;
@@ -109,7 +111,7 @@
             // LblPeakAmp
             // 
             this.LblPeakAmp.AutoSize = true;
-            this.LblPeakAmp.Location = new System.Drawing.Point(154, 77);
+            this.LblPeakAmp.Location = new System.Drawing.Point(154, 95);
             this.LblPeakAmp.Name = "LblPeakAmp";
             this.LblPeakAmp.Size = new System.Drawing.Size(89, 13);
             this.LblPeakAmp.TabIndex = 9;
@@ -118,7 +120,7 @@
             // LblPeakFreq
             // 
             this.LblPeakFreq.AutoSize = true;
-            this.LblPeakFreq.Location = new System.Drawing.Point(154, 64);
+            this.LblPeakFreq.Location = new System.Drawing.Point(154, 82);
             this.LblPeakFreq.Name = "LblPeakFreq";
             this.LblPeakFreq.Size = new System.Drawing.Size(90, 13);
             this.LblPeakFreq.TabIndex = 10;
@@ -145,7 +147,7 @@
             // TxtCentFreq
             // 
             this.TxtCentFreq.Enabled = false;
-            this.TxtCentFreq.Location = new System.Drawing.Point(88, 98);
+            this.TxtCentFreq.Location = new System.Drawing.Point(88, 116);
             this.TxtCentFreq.Name = "TxtCentFreq";
             this.TxtCentFreq.Size = new System.Drawing.Size(48, 20);
             this.TxtCentFreq.TabIndex = 18;
@@ -153,7 +155,7 @@
             // TxtSpan
             // 
             this.TxtSpan.Enabled = false;
-            this.TxtSpan.Location = new System.Drawing.Point(88, 119);
+            this.TxtSpan.Location = new System.Drawing.Point(88, 137);
             this.TxtSpan.Name = "TxtSpan";
             this.TxtSpan.Size = new System.Drawing.Size(48, 20);
             this.TxtSpan.TabIndex = 19;
@@ -161,7 +163,7 @@
             // BtnApply
             // 
             this.BtnApply.Enabled = false;
-            this.BtnApply.Location = new System.Drawing.Point(192, 116);
+            this.BtnApply.Location = new System.Drawing.Point(192, 134);
             this.BtnApply.Name = "BtnApply";
             this.BtnApply.Size = new System.Drawing.Size(75, 23);
             this.BtnApply.TabIndex = 20;
@@ -172,7 +174,7 @@
             // LblSpan
             // 
             this.LblSpan.AutoSize = true;
-            this.LblSpan.Location = new System.Drawing.Point(17, 126);
+            this.LblSpan.Location = new System.Drawing.Point(17, 144);
             this.LblSpan.Name = "LblSpan";
             this.LblSpan.Size = new System.Drawing.Size(35, 13);
             this.LblSpan.TabIndex = 21;
@@ -181,7 +183,7 @@
             // LblCentFreq
             // 
             this.LblCentFreq.AutoSize = true;
-            this.LblCentFreq.Location = new System.Drawing.Point(17, 105);
+            this.LblCentFreq.Location = new System.Drawing.Point(17, 123);
             this.LblCentFreq.Name = "LblCentFreq";
             this.LblCentFreq.Size = new System.Drawing.Size(65, 13);
             this.LblCentFreq.TabIndex = 22;
@@ -190,7 +192,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(142, 105);
+            this.label4.Location = new System.Drawing.Point(142, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 23;
@@ -199,7 +201,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(142, 126);
+            this.label5.Location = new System.Drawing.Point(142, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 24;
@@ -325,10 +327,30 @@
             this.BtnClear.UseVisualStyleBackColor = true;
             this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Port :";
+            // 
+            // TxtPort
+            // 
+            this.TxtPort.Location = new System.Drawing.Point(92, 54);
+            this.TxtPort.Multiline = true;
+            this.TxtPort.Name = "TxtPort";
+            this.TxtPort.Size = new System.Drawing.Size(61, 20);
+            this.TxtPort.TabIndex = 35;
+            this.TxtPort.Text = "5025";
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(609, 389);
+            this.Controls.Add(this.TxtPort);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.BtnDisconnect);
             this.Controls.Add(this.LblName);
@@ -395,5 +417,7 @@
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Button BtnDisconnect;
         private System.Windows.Forms.Button BtnClear;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtPort;
     }
 }

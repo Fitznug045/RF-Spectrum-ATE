@@ -55,7 +55,12 @@ namespace SpectrumAnalyzerGUI
             try
             {
                 string ip = TxtResource.Text;
-                int port = 5025;
+                if(!int.TryParse(TxtPort.Text, out int port))
+        {
+                    await MessageBox.ShowAsync("Port harus berupa angka!", "Error",
+                    MessageBox.ToastIcon.Error, 1500, this);
+                    return;
+                }
                 using (var cts = new CancellationTokenSource(3000)) //timeout 3 dtk
                 {
                     client = new TcpClient();
@@ -183,6 +188,7 @@ namespace SpectrumAnalyzerGUI
 
         private string SafeString(object val, string format = null)
         {
+
             if (val == null) return "0";
             if (val is double d) return d.ToString(format ?? "G", CultureInfo.InvariantCulture);
             if (val is float f) return f.ToString(format ?? "G", CultureInfo.InvariantCulture);
